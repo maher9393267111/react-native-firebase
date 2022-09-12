@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from './screens/Home.js'
 import Register from './screens/Register'
+import Deneme from './screens/deneme.js';
 import {
 
   NativeBaseProvider,
@@ -40,18 +41,31 @@ export default function App() {
       <Stack.Navigator initialRouteName="myApp">
 
       <Stack.Screen
+          name="Deneme"
+          component={Deneme}
+          options={{ headerShown: false }}
+        />
+
+
+
+
+      <Stack.Screen
           name="Home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
+
+
+
+      <Stack.Screen
+          name="Register"
           component={Register}
           options={{ headerShown: false }}
         />
 
 
 
-        <Stack.Screen
-          name="dfdf"
-          component={Home}
-          options={{ headerShown: false }}
-        />
+    
 
 
 
